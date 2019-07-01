@@ -2,11 +2,130 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-logo">
+          <img src="#" width="100" height="100" alt="Логотип магазина мороженого Gllacy">
+        </a>
+        <ul class="main-menu-list">
+          <li class="main-menu-item">
+            <a href="#">Каталог</a>
+            <ul class="submenu-list">
+              <li class="submenu-item">
+                <a href="#">Новинки</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Сливочное</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Щербеты</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Фруктовый лед</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu-item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="main-menu-item">
+            <a href="#">О Компании</a>
+          </li>
+        </ul>
+        <ul class="user-menu-list">
+          <li class="user-menu-item user-menu-search">
+            <a class="user-search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+            <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+              <input type="search" placeholder="Что ищем?" required>
+            </form>
+          </li>
+          <li class="user-menu-item user-menu-login">
+            <a class="user-login" href="#">
+              Вход
+            </a>
+            <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
+              <input type="email" placeholder="Электонная почта" required>
+              <input type="password" placeholder="Пароль" required>
+              <button type="button login-button" type="submit">Войти</button>
+              <p class="login-recovery">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
+          </li>
+          <li class="user-menu-item user-menu-cart user-menu-cart-empty">
+            <a href="#">
+              Пусто
+            </a>
+          </li>
+          <li class="user-menu-item user-menu-cart user-menu-cart-full">
+            <a href="#">
+              2 товара
+            </a>
+            <div class="cart-wrapper">
+              <table class="cart-content">
+                <tr class="cart-item">
+                  <td class="cart-item-delete">
+                    <button type="button">
+                      <span class="visually-hidden">Удалить товар из корзины</span>
+                    </button>
+                  </td>
+                  <td class="cart-item-icon">
+                    <img src="#" width="100" height="100" alt="Пломбир с апельсиновым джемом">
+                  </td>
+                  <td class="cart-item-title">
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td class="cart-item-amount">
+                    <span class="cart-item-weight">1,5 кг</span> x <span class="cart-item-price">200 руб.</span>
+                  </td>
+                  <td class="cart-item-total">
+                    300 руб.
+                  </td>
+                </tr>
+                <tr class="cart-item">
+                  <td class="cart-item-delete">
+                    <button type="button">
+                      <span class="visually-hidden">Удалить товар из корзины</span>
+                    </button>
+                  </td>
+                  <td class="cart-item-icon">
+                    <img src="#" width="100" height="100" alt="клубничный пломбир с присыпкой из белого шоколада">
+                  </td>
+                  <td class="cart-item-title">
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </td>
+                  <td class="cart-item-amount">
+                    <span class="cart-item-weight">1,5 кг</span> x <span class="cart-item-price">300 руб.</span>
+                  </td>
+                  <td class="cart-item-total">
+                    450 руб.
+                  </td>
+                </tr>
+                <tr class="cart-total">
+                  <td class="cart-total-price" colspan="5">
+                    Итого: 750 руб.
+                  </td>
+                </tr>
+              </table>
+              <a class="button" href="#">Оформить заказ</a>
+            </div>
+          </li>
+        </ul>
+        <p class="working-info">
+          С 10 до 20, ежедневно
+          <span class="working-info-phone">8 812 450-25-25</span>
+        </p>
+      </nav>
+    </header>
   </body>
 </html>
