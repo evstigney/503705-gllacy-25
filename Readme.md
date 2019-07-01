@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Василиса Варич](https://up.htmlacademy.ru/htmlcss/25/user/503705).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
