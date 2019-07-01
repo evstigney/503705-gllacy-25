@@ -55,7 +55,7 @@
             <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
               <input type="email" placeholder="Электонная почта" required>
               <input type="password" placeholder="Пароль" required>
-              <button type="button login-button" type="submit">Войти</button>
+              <button class="button login-button" type="submit">Войти</button>
               <p class="login-recovery">
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
@@ -127,5 +127,37 @@
         </p>
       </nav>
     </header>
+    <main class="index-main">
+      <h1 class="visually-hidden">Магазин мороженого Glaccy</h1>
+      <div class="main-slider">
+        <div class="slider-radios-list">
+          <label class="slider-radio slider-radio-current">
+            <input type="radio" name="slider" value="Первый слайд" checked>
+            <span class="visually-hidden">Показать первый слайд</span>
+          </label>
+          <label class="slider-radio">
+            <input type="radio" name="slider" value="Второй слайд">
+            <span class="visually-hidden">Показать второй слайд</span>
+          </label>
+          <label class="slider-radio">
+            <input type="radio" name="slider" value="Третий слайд">
+            <span class="visually-hidden">Показать третий слайд</span>
+          </label>
+        </div>
+        <div class="slide slide-first">
+          <p class="slide-title">Крем-брюле и пломбир с малиновым джемом</p>
+          <img class="slide-picture" src="#" width="100" height="100" alt="Крем-брюле и пломбир с малиновым джемом">
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide slide-second">
+          <p class="slide-title">Шоколадный пломбир и лимонный сорбет</p>
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide slide-third">
+          <p class="slide-title">Пломбир с помадкой и клубничный щербет</p>
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
