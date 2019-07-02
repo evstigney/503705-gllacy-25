@@ -45,7 +45,8 @@
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
             <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-              <input type="search" placeholder="Что ищем?" required>
+              <label class="visually-hidden" for="search-field">Введите поисковой запрос</label>
+              <input type="search" name="search" id="search-field" placeholder="Что ищем?" required>
             </form>
           </li>
           <li class="user-menu-item user-menu-login">
@@ -53,8 +54,10 @@
               Вход
             </a>
             <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
-              <input type="email" placeholder="Электонная почта" required>
-              <input type="password" placeholder="Пароль" required>
+              <label class="visually-hidden" for="login-email-field">Введите логин</label>
+              <input type="email" name="user-login" id="login-email-field" placeholder="Электонная почта" required>
+              <label class="visually-hidden" for="login-password-field">Введите пароль</label>
+              <input type="password" name="user-password" id="login-password-field" placeholder="Пароль" required>
               <button class="button login-button" type="submit">Войти</button>
               <p class="login-recovery">
                 <a href="#">Забыли пароль?</a>
@@ -203,10 +206,10 @@
           </li>
         </ul>
       </section>
-      <section class="features">
-        <h2 class="visually-hidden">Наши преимущества</h2>
+      <section class="info">
+        <h2 class="visually-hidden">Hаши преимущества</h2>
         <p class="features-title">
-          Магазин Глэйси — это онлайн- и офлайн- магазин по продаже мороженого собственного производстваа на развес
+          Магазин Глэйси — это онлайн- и офлайн- магазин по продаже мороженого собственного производства на развес
         </p>
         <p class="features-item feature-own-production">
           Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
@@ -214,13 +217,92 @@
         <p class="features-item feature-reliability">
           Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
         </p>
-        <p class="features-item feature-ecological">
+        <p class="features-item feature-quality">
           Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
         </p>
         <p class="features-item feature-freshness">
           Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
         </p>
       </section>
+      <article class="blog-news">
+        <h2 class="blog-news-title">Новое в нашем блоге</h2>
+        <a class="blog-news-item" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      </article>
+      <div class="feedback-wrapper">
+        <p>
+          Подпишитесь на нашу сладкую рассылку и будетевсегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерудны. Честно =)
+        </p>
+        <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
+          <label class="visually-hidden" for="subscribe-email-field">Введите ваш email</label>
+          <input type="email" name="subscribe-email" id="subscribe-email-field" placeholder="Электронная почта" required>
+          <button class="button subscribe-button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <img class="map" src="#" width="100" height="100" alt="Наш адрес: ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <div class="map interactive-map" id="map"></div>
+        <div class="contacts-card">
+          <p>Адрес главного офиса и офлайн-магазина:
+            <span class="address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          </p>
+          <p>Для заказов по телефону:
+          <span class="phone">8 812 450-25-25</span>
+          (с 10 до 20 ежедневно)
+          </p>
+          <button class="button feedback-open" type="button">Форма обратной связи</button>
+        </div>
+      </section>
     </main>
+    <footer class="page-footer">
+      <ul class="social-list">
+        <li class="social-item">
+          <a href="#"><span class="visually-hidden">Gllacy в Twitter</span></a>
+        </li>
+        <li class="social-item">
+          <a href="#"><span class="visually-hidden">Gllacy в Instagram</span></a>
+        </li>
+        <li class="social-item">
+          <a href="#"><span class="visually-hidden">Gllacy в Facebook</span></a>
+        </li>
+        <li class="social-item">
+          <a href="#"><span class="visually-hidden">Gllacy в ВКонтакте</span></a>
+        </li>
+      </ul>
+      <ul class="footer-menu-list">
+        <li class="footer-menu-item">
+          <a class="for-providers" href="#">Для поставщиков</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#">О производстве</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#">Наши документы</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#">Экологические стандарты</a>
+        </li>
+      </ul>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="copyright-logo" src="#" width="100" height="100" alt="HTML Academy">
+        </a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      </div>
+    </footer>
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <p class="modal-feedback-title">Мы обязательно вам ответим!</p>
+      <form class="feedback-form">
+        <label class="visually-hidden" for="feedback-name-field">Введите Ваше имя</label>
+        <input class="feedback-name" type="text" name="user-name" id="feedback-name-field" placeholder="Как вас зовут?" required>
+        <label class="visually-hidden" for="feedback-email-field">Введите Ваш email</label>
+        <input class="feedback-email" type="email" name="user-email" id="feedback-email-field" placeholder="Ваша почта для ответа?" required>
+        <label class="visually-hidden" for="feedback-content-field">Напишите текст обращения</label>
+        <textarea class="feedback-content" rows="4" name="feedback-content" id="feedback-content-field" placeholder="Напишите что-нибудь..." required></textarea>
+        <button class="feedback-button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+    </section>
   </body>
 </html>
