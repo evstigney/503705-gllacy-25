@@ -40,7 +40,7 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  font-weight: normal;
+  font-weight: 400;
 
   background-color: #849d8f;
 }
@@ -50,4 +50,123 @@ body > * {
   margin: auto;
   padding-left: 27px;
   padding-right: 27px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+a:hover, a:active {
+  color: #ffbc9e;
+
+  border-bottom-color: rgba(255, 188, 158, 0.2);
+}
+
+.main-logo {
+  border-bottom: none;
+}
+
+.main-menu-list {
+  margin: 0;
+  padding: 0;
+
+  line-height: 18px;
+  font-weight: 700;
+
+  list-style: none;
+}
+
+.main-menu-item a {
+  position: relative;
+}
+
+.main-menu-item > a::before {
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  z-index: -1;
+
+  display: none;
+  width: calc(100% + 20px);
+  height: calc(100% + 10px);
+
+  content: "";
+}
+
+.main-menu-item > a:hover {
+  color: #323232;
+
+  border-bottom: none;
+}
+
+.main-menu-item > a:hover::before,
+.main-menu-item > a:focus::before {
+  display: block;
+
+  background-color: #f7f6f3;
+}
+
+.main-menu-item > a:active::before {
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+.main-menu-current > a,
+.main-menu-current > a:hover,
+.main-menu-current > a:active {
+  color: #ffffff;
+
+  background-color: #d07058;
+  border-bottom: none;
+}
+
+.main-menu-current > a::before,
+.main-menu-current > a:hover::before,
+.main-menu-current > a:active::before {
+  display: block;
+
+  background-color: #d07058;
+}
+
+.submenu-list {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+
+  background-color: #f7f6f3;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  list-style: none;
+}
+
+.submenu-list a {
+  display: block;
+
+  color: #323232;
+}
+
+.submenu-item:first-of-type {
+  font-weight: bold;
+}
+
+.submenu-list a:hover,
+.submenu-list a:focus {
+  background-color: #fbded7;
+}
+
+.submenu-list a:active {
+  background-color: #f6b5a5;
+}
+
+.submenu-item-current a,
+.submenu-item-current a:hover,
+.submenu-item-current a:active {
+  color: #ffffff;
+
+  background-color: #d07058;
 }
