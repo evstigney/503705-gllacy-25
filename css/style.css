@@ -301,7 +301,7 @@ a:hover, a:active {
   line-height: 24px;
 }
 
-.slider-radio input[type="radio"]::before {
+.slider-radio::before {
   position: fixed;
   top: 0;
   left: 0;
@@ -313,14 +313,24 @@ a:hover, a:active {
   content: "";
 }
 
-.slider-radio:nth-of-type(1) input[type="radio"]:checked::before {
+.slider-radio:nth-of-type(1):checked::before {
   background-color: #849d8f;
 }
 
-.slider-radio:nth-of-type(2) input[type="radio"]:checked::before {
+.slider-radio:nth-of-type(2):checked::before {
   background-color: #8996a6;
 }
 
-.slider-radio:nth-of-type(3) input[type="radio"]:checked::before {
+.slider-radio:nth-of-type(3):checked::before {
   background-color: #9d8b84;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-radio:nth-of-type(1):checked ~ .slide-first,
+.slider-radio:nth-of-type(2):checked ~ .slide-second,
+.slider-radio:nth-of-type(3):checked ~ .slide-third {
+  display: block;
 }
