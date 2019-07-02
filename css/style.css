@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular-webfont.eot");
+    src: local("Roboto"), local("Roboto-Regular"), local("Roboto-Regular-webfont"),
+         url("fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/Roboto-Regular-webfont.woff2") format("woff2"),url(),
+         url("fonts/Roboto-Regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Medium-webfont.eot");
+    src: local("Roboto"), local("Roboto-Medium"), local("Roboto-Medium-webfont"),
+         url("fonts/Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/Roboto-Medium-webfont.woff2") format("woff2"),
+         url("fonts/Roboto-Medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Bold-webfont.eot");
+    src: local("Roboto"), local("Roboto-Bold"), local("Roboto-Bold-webfont"),
+         url("fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/Roboto-Bold-webfont.woff2") format("woff2"),
+         url("fonts/Roboto-Bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+
+  background-color: #849d8f;
+}
