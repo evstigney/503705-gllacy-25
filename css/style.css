@@ -189,11 +189,12 @@ a.button::after {
 }
 
 .main-menu-item {
+  position: relative;
   padding-left: 14px;
   padding-right: 14px;
 }
 
-.main-menu-item a {
+.main-menu-item > a {
   position: relative;
 }
 
@@ -216,18 +217,18 @@ a.button::after {
   content: "";
 }
 
-.main-menu-item > a:hover {
+.main-menu-item:hover > a {
   color: #323232;
 
   border-bottom: none;
 }
 
-.main-menu-item > a:hover::after,
+.main-menu-item:hover > a::after,
 .main-menu-item > a:active::after {
   display: none;
 }
 
-.main-menu-item > a:hover::before {
+.main-menu-item:hover > a::before {
   display: block;
 
   background-color: #f7f6f3;
@@ -264,9 +265,15 @@ a.button::after {
 }
 
 .submenu-list {
-  display: none;
+  position: absolute;
+  top: 31px;
+  left: -6px;
+  z-index: 2;
+
   margin: 0;
   padding: 0;
+  padding-top: 5px;
+  padding-bottom: 4px;
 
   font-size: 14px;
   line-height: 16px;
@@ -275,27 +282,64 @@ a.button::after {
   background-color: #f7f6f3;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 
   list-style: none;
+
+  visibility: hidden;
+}
+
+.main-menu-item:hover .submenu-list {
+  visibility: visible;
 }
 
 .submenu-list a {
   display: block;
+  min-width: 115px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 8px;
 
   color: #323232;
 }
 
-.submenu-item:first-of-type {
-  font-weight: bold;
+.submenu-list a:active {
+  background-color: #f6b5a5;
 }
 
-.submenu-list a:hover,
-.submenu-list a:focus {
+.submenu-list a:hover {
   background-color: #fbded7;
 }
 
-.submenu-list a:active {
-  background-color: #f6b5a5;
+.submenu-item {
+  margin-bottom: 2px;
+}
+
+.submenu-item:first-of-type {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.submenu-item:first-of-type::before {
+  position: absolute;
+  bottom: -5px;
+  left: 7px;
+
+  width: calc(100% - 15px);
+  height: 1px;
+
+  background-color: rgba(53, 53, 53, 0.2);
+
+  content: "";
+}
+
+.submenu-item:first-of-type a {
+  padding-top: 5px;
+
+  font-weight: bold;
 }
 
 .submenu-item-current a,
@@ -321,8 +365,11 @@ a.button::after {
 }
 
 .user-menu-item {
+  position: relative;
+
   margin-left: 8px;
 }
+
 
 .user-menu-item > a {
   display: block;
@@ -341,16 +388,20 @@ a.button::after {
   background-color: #f7f6f3;
 }
 
-.user-menu-item > a:hover,
-.user-menu-item > a:focus {
+.user-menu-item:hover > a {
   color: #323232;
 
   background-color: #f8f7f4;
 }
 
-.user-menu-cart-full > a:active {
+.user-menu-cart-full:active > a {
   -webkit-box-shadow: inset 0 2px 1px 0 #696969;
           box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+.user-menu-search {
+  top: -1px;
+  left: -1px;
 }
 
 .user-menu-search > a {
@@ -365,7 +416,7 @@ a.button::after {
   border-radius: 50%;
 }
 
-.user-menu-search > a:hover {
+.user-menu-search:hover > a {
   background-image: url("../img/loupe-black.png");
 }
 
@@ -386,13 +437,13 @@ a.button::after {
   background-repeat: no-repeat;
 }
 
-.user-menu-login > a:hover {
+.user-menu-login:hover > a {
   background-image: url("../img/login-black.png");
 }
 
 .user-menu-item.user-menu-cart-empty > a,
-.user-menu-item.user-menu-cart-empty > a:hover,
-.user-menu-item.user-menu-cart-empty > a:active {
+.user-menu-item.user-menu-cart-empty:hover > a,
+.user-menu-item.user-menu-cart-empty:active > a {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/cart-empty.png");
@@ -401,7 +452,36 @@ a.button::after {
 }
 
 .search-form {
-  display: none;
+  position: absolute;
+  top: 37px;
+  right: 1px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border-radius: 6px;
+
+  visibility: hidden;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 311px;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  padding-right: 15px;
+  box-sizing: border-box;
+
+  border-radius: 6px;
+}
+
+.user-menu-search:hover .search-form {
+  visibility: visible;
 }
 
 .login-form {
