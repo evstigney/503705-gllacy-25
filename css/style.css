@@ -181,6 +181,7 @@ a.button::after {
 .main-menu-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 570px;
   margin: 0;
   margin-right: auto;
   padding: 0;
@@ -195,6 +196,8 @@ a.button::after {
 
 .main-menu-item {
   position: relative;
+
+  margin-bottom: 9px;
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -358,6 +361,7 @@ a.button::after {
 .user-menu-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 374px;
   margin: 0;
   padding: 0;
   padding-top: 15px;
@@ -640,16 +644,20 @@ form textarea::placeholder {
 
 .main-slider {
   position: relative;
+
+  margin-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .slider-radio {
   position: relative;
 
-  z-index: -4;
+  z-index: -5;
 }
 
 .slider-label {
   position: absolute;
+  bottom: 42px;
   z-index: 2;
 
   display: inline-block;
@@ -670,17 +678,14 @@ form textarea::placeholder {
 }
 
 .slider-radio1 + .slider-label[for="slider-radio-first"] {
-  bottom: 21px;
   left: 0;
 }
 
 .slider-radio2 + .slider-label[for="slider-radio-second"] {
-  bottom: 21px;
   left: 29px;
 }
 
 .slider-radio3 + .slider-label[for="slider-radio-third"] {
-  bottom: 21px;
   left: 58px;
 }
 
@@ -710,6 +715,7 @@ form textarea::placeholder {
 
 .slide {
   position: absolute;
+  z-index: -2;
 
   display: flex;
   flex-direction: column;
@@ -731,9 +737,9 @@ form textarea::placeholder {
 
 .slide-picture {
   position: absolute;
-  top: -97px;
-  left: 17px;
-  z-index: -2;
+  top: -94px;
+  left: 19px;
+  z-index: -1;
 }
 
 .slide-title {
@@ -762,26 +768,70 @@ form textarea::placeholder {
   border-radius: 29px;
 }
 
+.special-offers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .special-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 521px;
+  padding-top: 13px;
+  padding-bottom: 25px;
+  padding-left: 18px;
+  padding-right: 21px;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+
+  border-radius: 15px;
 }
 
 .special-offer-raspberry {
   background-color: #70122b;
+  background-image: url("../img/bg-raspberry.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 .special-offer-chocolate {
   background-color: #3e261c;
+  background-image: url("../img/bg-chocolate.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 .special-offer-title {
+  margin: 0;
+  margin-bottom: 17px;
+  padding: 0;
+
   font-size: 35px;
   line-height: 41px;
 }
 
+.special-offer-content {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+}
+
+.special-offer-button {
+  align-self: flex-end;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 22px;
+
+  border-radius: 23px;
+}
+
 .product-list {
+  width: 100%;
   margin: 0;
   padding: 0;
 
