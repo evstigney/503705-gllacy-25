@@ -662,7 +662,7 @@ form textarea::placeholder {
 
 .slider-radio {
   position: relative;
-
+  top: -5000px;
   z-index: -5;
 }
 
@@ -738,6 +738,20 @@ form textarea::placeholder {
   visibility: hidden;
 }
 
+.slide::before {
+  position: absolute;
+  bottom: -211px;
+  z-index: -2;
+
+  display: block;
+  width: 200%;
+  height: 200%;
+
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 467px);
+
+  content: "";
+}
+
 .slider-radio:nth-of-type(1):checked ~ .slide-first,
 .slider-radio:nth-of-type(2):checked ~ .slide-second,
 .slider-radio:nth-of-type(3):checked ~ .slide-third {
@@ -748,8 +762,8 @@ form textarea::placeholder {
 
 .slide-picture {
   position: absolute;
-  top: -98px;
-  left: 19px;
+  top: -15px;
+  left: 251px;
   z-index: -1;
 }
 
@@ -1110,25 +1124,18 @@ form textarea::placeholder {
 
 .blog-news-item::after {
   display: none;
-
-  border-bottom: 2px solid #323232;
 }
 
 .blog-news-item:hover,
 .blog-news-item:focus,
 .blog-news-item:active {
   color: #e84d37;
-}
-
-.blog-news-item:hover::after,
-.blog-news-item:focus::after,
-.blog-news-item:active::after {
-  border-bottom-color: #e84d37;
+  background: linear-gradient(to top, rgba(236, 89, 60, 0) 0%, rgba(236, 89, 60, 0) 2px, rgba(236, 89, 60, 0.3) 3px, rgba(236, 89, 60, 0.3) 4px, rgba(236, 89, 60, 0) 5px);
 }
 
 .subscribe-wrapper {
   position: relative;
-  z-index: -2;
+  z-index: 0;
 
   width: 514px;
   min-height: 164px;
@@ -1169,6 +1176,8 @@ form textarea::placeholder {
 }
 
 .subscribe-form {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
