@@ -820,7 +820,7 @@ form textarea::placeholder {
 
 .special-offer-content {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 47px;
   padding: 0;
 }
 
@@ -835,11 +835,12 @@ form textarea::placeholder {
 
 .product-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
+  margin-bottom: 7px;
   padding: 0;
 
   list-style: none;
@@ -867,21 +868,18 @@ form textarea::placeholder {
   width: 267px;
   padding-top: 5px;
 
-  /*
-  padding-top: 6px;
-  padding-bottom: 22px;
-  padding-left: 12px;
-  padding-right: 12px;
-  */
-
   border-radius: 8px;
+}
+
+.product-item:not(:nth-of-type(4n)) {
+  margin-right: 26px;
 }
 
 .product-item::after {
   position: absolute;
   top: 0;
   left: -12px;
-  z-index: 0;
+
 
   display: none;
   width: calc(100% + 25px);
@@ -894,14 +892,16 @@ form textarea::placeholder {
 }
 
 .product-item:hover::after {
+  z-index: 2;
+
   display: block;
 }
 
 .product-item-hit::before {
   position: absolute;
   top: 7px;
-  left: 16px;
-  z-index: 2;
+  left: 0;
+  z-index: 1;
 
   display: block;
   width: 61px;
@@ -918,7 +918,6 @@ form textarea::placeholder {
 
 .product-item-picture {
   position: relative;
-  z-index: 1;
 
   margin: 0;
   padding: 0;
@@ -940,9 +939,8 @@ form textarea::placeholder {
 
 .product-item-price {
   position: absolute;
-  bottom: 116px;
+  bottom: 72px;
   left: 0;
-  z-index: 1;
 
   margin: 0;
   padding: 0;
@@ -960,7 +958,6 @@ form textarea::placeholder {
 .product-button {
   position: absolute;
   bottom: -47px;
-  z-index: 1;
 
   order: -1;
   display: none;
@@ -971,7 +968,21 @@ form textarea::placeholder {
 }
 
 .product-item:hover .product-button {
+  z-index: 3;
+
   display: block;
+}
+
+.product-item:hover .product-item-picture {
+  z-index: 3;
+}
+
+.product-item:hover .product-item-price {
+  z-index: 3;
+}
+
+.product-item-hit:hover::before {
+  z-index: 4;
 }
 
 .features {
