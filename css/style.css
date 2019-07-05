@@ -1265,8 +1265,10 @@ div.map {
 
 .page-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding-bottom: 24px;
+
   font-size: 13px;
   line-height: 18px;
 }
@@ -1274,7 +1276,9 @@ div.map {
 .social-list {
   display: flex;
   flex-wrap: wrap;
+  width: 350px;
   margin: 0;
+  margin-right: 50px;
   padding: 0;
   padding-top: 21px;
 
@@ -1348,17 +1352,63 @@ div.map {
   opacity: 0.9;
 }
 
-
-
 .footer-menu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 306px;
   margin: 0;
+  margin-right: auto;
   padding: 0;
+  padding-top: 17px;
+  padding-left: 23px;
+  padding-right: 23px;
 
   list-style: none;
 }
 
+.footer-menu-item {
+  min-width: 142px;
+  margin-bottom: 5px;
+}
+
+.for-providers {
+  position: relative;
+}
+
+.for-providers::before {
+  position: absolute;
+  top: 3px;
+  left: -23px;
+
+  display: block;
+  width: 17px;
+  height: 15px;
+
+  background-image: url("../img/heart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.for-providers:hover::before {
+  background-image: url("../img/heart-hover.svg");
+}
+
 .copyright {
+  max-width: 200px;
+
   font-size: 12px;
+}
+
+.copyright a:first-child {
+  display: block;
+}
+
+.copyright a:first-child::after {
+  display: none;
 }
 
 .modal {
