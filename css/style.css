@@ -663,7 +663,7 @@ form textarea::placeholder {
 
 .slider-radio {
   position: relative;
-
+  top: -5000px;
   z-index: -5;
 }
 
@@ -741,12 +741,23 @@ form textarea::placeholder {
 
 .slide::before {
   position: absolute;
+<<<<<<< HEAD
   z-index: -1;
 
   width: 100%;
   height: 200%;
 
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.7) 0px, rgba(255, 255, 255, 0) 500px);
+=======
+  bottom: -211px;
+  z-index: -2;
+
+  display: block;
+  width: 200%;
+  height: 200%;
+
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 467px);
+>>>>>>> 99efeaed5f04f0a405dd7d36b6bff003468e2062
 
   content: "";
 }
@@ -762,7 +773,11 @@ form textarea::placeholder {
 .slide-picture {
   position: absolute;
   top: -15px;
+<<<<<<< HEAD
   left: 252px;
+=======
+  left: 251px;
+>>>>>>> 99efeaed5f04f0a405dd7d36b6bff003468e2062
   z-index: -1;
 }
 
@@ -1123,25 +1138,18 @@ form textarea::placeholder {
 
 .blog-news-item::after {
   display: none;
-
-  border-bottom: 2px solid #323232;
 }
 
 .blog-news-item:hover,
 .blog-news-item:focus,
 .blog-news-item:active {
   color: #e84d37;
-}
-
-.blog-news-item:hover::after,
-.blog-news-item:focus::after,
-.blog-news-item:active::after {
-  border-bottom-color: #e84d37;
+  background: linear-gradient(to top, rgba(236, 89, 60, 0) 0%, rgba(236, 89, 60, 0) 2px, rgba(236, 89, 60, 0.3) 3px, rgba(236, 89, 60, 0.3) 4px, rgba(236, 89, 60, 0) 5px);
 }
 
 .subscribe-wrapper {
   position: relative;
-  z-index: -2;
+  z-index: 0;
 
   width: 514px;
   min-height: 164px;
@@ -1182,6 +1190,8 @@ form textarea::placeholder {
 }
 
 .subscribe-form {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
