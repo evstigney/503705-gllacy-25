@@ -59,6 +59,13 @@ body > * {
   padding-right: 27px;
 }
 
+.index-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 a {
   position: relative;
 
@@ -647,6 +654,7 @@ form textarea::placeholder {
 .main-slider {
   position: relative;
 
+  width: 100%;
   margin-bottom: 21px;
   padding-bottom: 20px;
 }
@@ -775,6 +783,7 @@ form textarea::placeholder {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -990,6 +999,8 @@ form textarea::placeholder {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 40px;
   padding-top: 25px;
   padding-bottom: 2px;
   padding-left: 22px;
@@ -1054,13 +1065,33 @@ form textarea::placeholder {
   background-image: url("../img/thermometer.png");
 }
 
+.info-wrapper {
+  width: 522px;
+  min-height: 174px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 19px;
+  padding-right: 19px;
+
+  border-radius: 13px;
+}
+
 .blog-news {
+  width: 300px;
+  padding-right: 241px;
   color: #323232;
 
   background-color: #ffffff;
+  background-image: url("../img/bg-strawberry.jpg");
+  background-position: top -36px right -35px;
+  background-repeat: no-repeat;
 }
 
 .blog-news-title {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -1071,10 +1102,12 @@ form textarea::placeholder {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+
+  background: linear-gradient(to top, rgba(53, 53, 53, 0) 0%, rgba(53, 53, 53, 0) 2px, rgba(53, 53, 53, 1) 3px, rgba(53, 53, 53, 1) 4px, rgba(53, 53, 53, 0) 5px);
 }
 
 .blog-news-item::after {
-  bottom: 3px;
+  display: none;
 
   border-bottom: 2px solid #323232;
 }
