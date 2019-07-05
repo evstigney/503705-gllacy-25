@@ -264,8 +264,8 @@ a.button::after {
 }
 
 .main-menu-current > a,
-.main-menu-current > a:hover,
-.main-menu-current > a:active {
+.main-menu-current:hover > a,
+.main-menu-current:active > a {
   color: #ffffff;
 
   background-color: #d07058;
@@ -273,8 +273,8 @@ a.button::after {
 }
 
 .main-menu-current > a::before,
-.main-menu-current > a:hover::before,
-.main-menu-current > a:active::before {
+.main-menu-current:hover > a::before,
+.main-menu-current:active > a::before {
   display: block;
 
   background-color: #d07058;
@@ -400,12 +400,6 @@ a.button::after {
   display: none;
 }
 
-.user-menu-cart-full > a {
-  color: #323232;
-
-  background-color: #f7f6f3;
-}
-
 .user-menu-item:hover > a {
   color: #323232;
 
@@ -465,6 +459,15 @@ a.button::after {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/cart-empty.png");
+  background-position: top 50% left 17px;
+  background-repeat: no-repeat;
+}
+
+.user-menu-cart-full > a {
+  color: #323232;
+
+  background-color: #f7f6f3;
+  background-image: url("../img/cart-full.png");
   background-position: top 50% left 17px;
   background-repeat: no-repeat;
 }
