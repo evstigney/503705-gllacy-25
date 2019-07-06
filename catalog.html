@@ -161,42 +161,43 @@
           </div>
           <fieldset class="product-filter">
             <legend class="product-filter-header">Жирность:</legend>
-            <label>
-              <input type="radio" name="fatness" value="0">
+            <input type="radio" name="fatness" id="fatness-0" favalue="0">
+            <label class="filter-radio" for="fatness-0">
               0%
             </label>
-            <label>
-              <input type="radio" name="fatness" value="lt10" checked>
+            <input type="radio" name="fatness" id="fatness-lt10" value="lt10" checked>
+            <label class="filter-radio" for="fatness-lt10">
               до 10%
             </label>
-            <label>
-              <input type="radio" name="fatness" value="lt30">
+            <input type="radio" name="fatness" id="fatness-lt30" value="lt30">
+            <label class="filter-radio" for="fatness-lt30">
               до 30%
             </label>
-            <label>
-              <input type="radio" name="fatness" value="gt30">
+            <input type="radio" name="fatness" id="fatness-gt30" value="gt30">
+            <label class="filter-radio" for="fatness-gt30">
+              выше 30%
             </label>
           </fieldset>
           <fieldset class="product-filter">
             <legend class="product-filter-header">Наполнители:</legend>
-            <label>
-              <input type="checkbox" name="chocolate" checked>
+            <input type="checkbox" name="chocolate" id="filler-chocolate" checked>
+            <label class="filter-filler" for="filler-chocolate">
               шоколадные
             </label>
-            <label>
-              <input type="checkbox" name="sugar" checked>
+            <input type="checkbox" name="sugar" id="filler-sugar" checked>
+            <label class="filter-filler" for="filler-sugar">
               сахарные присыпки
             </label>
-            <label>
-              <input type="checkbox" name="fruits">
+            <input type="checkbox" name="fruits" id="filler-fruits">
+            <label class="filter-filler" for="filler-fruits">
               фрукты
             </label>
-            <label>
-              <input type="checkbox" name="syrups">
+            <input type="checkbox" name="syrups" id="filler-syrups">
+            <label class="filter-filler" for="filler-syrups">
               сиропы
             </label>
-            <label>
-              <input type="checkbox" name="jams">
+            <input type="checkbox" name="jams" id="filler-jams">
+            <label class="filter-filler" for="filler-jams">
               джемы
             </label>
           </fieldset>
