@@ -66,7 +66,8 @@ var closeModalFeedback = function () {
   }, 0.1);
 };
 
-buttonFeedback.addEventListener('click', function () {
+buttonFeedback.addEventListener('click', function (evt) {
+  evt.preventDefault();
   openModalFeedback();
 });
 

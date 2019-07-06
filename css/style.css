@@ -1371,7 +1371,8 @@ div.map {
 }
 
 .contacts-card {
-  position: relative;
+  position: absolute;
+  top:63px;
   z-index: 2;
   width: 251px;
   padding-top: 28px;
@@ -1394,7 +1395,7 @@ div.map {
 }
 
 .contacts-card p:last-of-type {
-  margin-bottom: 28px;
+  margin-bottom: 38px;
 }
 
 .contacts-card .small {
@@ -1412,6 +1413,7 @@ div.map {
 .feedback-open {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 29px;
 }
 
 .page-footer {
