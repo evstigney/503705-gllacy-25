@@ -1,3 +1,38 @@
+/*--------СЛАЙДЕР-----------*/
+
+var body = document.querySelector('.index-body');
+var radio1 = document.querySelector('label[for="slider-radio-first"]');
+var radio2 = document.querySelector('label[for="slider-radio-second"]');
+var radio3 = document.querySelector('label[for="slider-radio-third"]');
+var sliders = document.querySelectorAll('.slide')
+
+var showSlide = function (element) {
+  for (var i = 0; i < sliders.length; i++) {
+    sliders[i].style.display = 'none';
+  }
+  if (element === sliders[0]) {
+    body.style.backgroundColor = '#849d8f';
+    body.style.backgroundImage = 'url("img/slide1.png")';
+  } else if (element === sliders[1]) {
+    body.style.backgroundColor = '#8996a6';
+    body.style.backgroundImage = 'url("img/slide2.png")';
+  } else {
+    body.style.backgroundColor = '#9d8b84'
+    body.style.backgroundImage = 'url("img/slide3.png")';
+  }
+  element.style.display = 'flex';
+};
+
+radio1.addEventListener('click', function () {
+  showSlide(sliders[0]);
+});
+radio2.addEventListener('click', function () {
+  showSlide(sliders[1]);
+});
+radio3.addEventListener('click', function () {
+  showSlide(sliders[2]);
+});
+
 /*-------МОДАЛЬНОЕ ОКНО--------*/
 
 var buttonFeedback = document.querySelector('.feedback-open');
