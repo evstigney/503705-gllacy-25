@@ -99,6 +99,24 @@ a:active::after {
   border-bottom-color: rgba(255, 188, 158, 0.3);
 }
 
+.black {
+  color: #323232;
+}
+
+.black::after {
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.black:hover,
+.bleck:active {
+  color: #e84d37;
+}
+
+.black:hover::after,
+.black:active::after {
+  border-bottom-color: rgba(236, 89, 60, 0.3);
+}
+
 .button {
   position: relative;
 
@@ -1449,17 +1467,100 @@ div.map {
 }
 
 .cart-wrapper {
+  position: absolute;
+  top: 36px;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 540px;
+  padding-top: 19px;
+  padding-bottom: 21px;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+
   color: #323232;
   font-size: 13px;
   line-height: 16px;
 
+  border-radius: 5px;
+
   background-color: #f8f7f4;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  visibility: hidden;
+}
+
+.user-menu-cart-full:hover .cart-wrapper {
+  visibility: visible;
 }
 
 .cart-content {
+  margin-bottom: 14px;
+
   border-collapse: collapse;
+}
+
+.cart-content td {
+  min-height: 53px;
+  padding-top: 8px;
+  box-sizing: border-box;
+
+  vertical-align: top;
+}
+
+.cart-item:nth-last-of-type(2) td {
+  padding-bottom: 18px;
+}
+
+.cart-item-delete {
+  padding-bottom: 8px;
+  padding-right: 12px;
+}
+
+.cart-item-delete button {
+  width: 11px;
+  height: 11px;
+
+  background-color: #f8f7f4;
+  background-image: url("../img/cross-small.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.cart-item-icon {
+  position: relative;
+  width: 35px;
+  height: 53px;
+}
+
+.cart-item-icon img {
+  position: absolute;
+  top: 0;
+}
+
+.cart-item-title {
+  padding-left: 12px;
+  padding-right: 14px;
+  padding-bottom: 2px;
+
+  vertical-align: bottom;
+}
+
+.cart-item-amount {
+  width: 123px;
+  padding-bottom: 2px;
+  padding-right: 8px;
+}
+
+.cart-item-total {
+  width: 71px;
+  padding-bottom: 2px;
 }
 
 .cart-total {
@@ -1470,8 +1571,29 @@ div.map {
   border-top: 1px solid #cacac6;
 }
 
+.cart-content .cart-total-price {
+  padding-top: 13px;
+
+  text-align: right;
+}
+
+.button-place-order {
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  padding-right: 16px;
+
+  border-radius: 21px;
+}
+
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 840px;
   margin: 0;
+  margin-bottom: 3px;
   padding: 0;
 
   font-size: 14px;
@@ -1480,10 +1602,17 @@ div.map {
   list-style: none;
 }
 
+.breadcrumbs-item {
+  position: relative;
+
+  padding-top: 21px;
+  padding-right: 21px;
+}
+
 .breadcrumbs-item:not(:last-of-type) a::before {
   position: absolute;
   top: auto;
-  right: -20px;
+  right: -14px;
 
   content: "»";
 }
@@ -1495,6 +1624,15 @@ div.map {
   display: none;
 }
 
+.inner-title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-size: 35px;
+  line-height: 41px;
+}
+
 .product-filters {
   font-size: 16px;
   line-height: 18px;
@@ -1504,24 +1642,31 @@ div.map {
 .product-filter {
   position: relative;
 
-  margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 36px;
+  margin-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 4px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
+  border-radius: 20px;
 }
 
 .product-filters-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 25px;
 }
 
 .product-filter-header {
   position: absolute;
-  top: -10px;
-  left: 0;
+  top: -23px;
+  left: 15px;
 
   margin: 0;
   padding: 0;
@@ -1532,12 +1677,12 @@ div.map {
 
 .filter-sort-title {
   position: relative;
-  padding-right: 30px;
+  padding-right: 47px;
 }
 
 .filter-sort-title::before {
   position: absolute;
-  top:8px;
+  top:7px;
   right: 10px;
 
   width: 1px;
@@ -1545,7 +1690,7 @@ div.map {
 
   background-color: transparent;
   border: 5px solid #ffffff;
-  border-top-width: 10px;
+  border-top-width: 8px;
   border-bottom: none;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -1553,28 +1698,61 @@ div.map {
   content: "";
 }
 
-.product-filter:hover .filter-sort-title {
+.product-filter-sort:hover .filter-sort-title,
+.product-filter-sort:focus .filter-sort-title,
+.product-filter-sort:active .filter-sort-title,
+.product-filter-sort:focus-within .filter-sort-title {
   color: #323232;
 }
 
-.product-filter:hover .filter-sort-title::before {
+.product-filter-sort {
+  z-index: 2;
+}
+
+.product-filter-sort:focus,
+.product-filter-sort:focus-within,
+.product-filter-sort:active {
+  background-color: #ffffff;
+}
+
+.product-filter-sort:hover .filter-sort-title::before,
+.product-filter-sort:focus-within .filter-sort-title::before,
+.product-filter-sort:active .filter-sort-title::before {
   border-top-color: #323232;
 }
 
 .sort-list {
   position: absolute;
-  top: 0;
-  left: -150px;
+  top: 36px;
+  left: 0;
 
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  box-sizing: border-box;
 
   color: #323232;
+  font-size: 14px;
+  line-height: 16px;
 
   background-color: #ffffff;
 
   list-style: none;
+
+  visibility: hidden;
+}
+
+.product-filter-sort:focus {
+  outline: none;
+}
+
+.product-filter-sort:active .sort-list,
+.product-filter-sort .sort-list:hover,
+.product-filte-sort:focus .sort-list,
+.product-filter-sort:focus-within .sort-list {
+  visibility: visible;
 }
 
 .filter-button {
@@ -1588,6 +1766,26 @@ div.map {
   outline: none;
   -webkit-box-shadow: inset 0 0 0 2px #ffffff;
           box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.sort-list .black::after {
+  display: none;
+}
+
+.sort-list a {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.sort-list a:hover,
+.sort-list a:focus,
+.sort-list a:active {
+  color: #ffffff;
+
+  background-color: #1e90ff;
 }
 
 .filter-button:hover,
