@@ -836,7 +836,6 @@ form textarea::placeholder {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .special-offer {
@@ -906,6 +905,10 @@ form textarea::placeholder {
   padding: 0;
 
   list-style: none;
+}
+
+.index-main .product-list {
+  margin-bottom: 0;
 }
 
 .product-list a::after {
@@ -1058,7 +1061,7 @@ form textarea::placeholder {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   padding-top: 25px;
   padding-bottom: 2px;
   padding-left: 22px;

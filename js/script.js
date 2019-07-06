@@ -1,3 +1,5 @@
+/*-------МОДАЛЬНОЕ ОКНО--------*/
+
 var buttonFeedback = document.querySelector('.feedback-open');
 var buttonClose = document.querySelector('.modal-close');
 var modalFeedback = document.querySelector('.modal-feedback');
@@ -36,3 +38,18 @@ buttonFeedback.addEventListener('click', function () {
 buttonClose.addEventListener('click', function () {
   closeModalFeedback();
 });
+
+/*-----------ИНТЕРАКТИВНАЯ КАРТА---------*/
+
+var initMap = function () {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: {lat: 59.939563, lng: 30.329135},
+    disableDefaultUI: true
+  });
+  var marker = new google.maps.Marker({
+    position: {lat: 59.938904, lng: 30.324215},
+    icon: 'img/map-marker.png',
+    map: map
+  });
+};
