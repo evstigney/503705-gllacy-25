@@ -1082,6 +1082,7 @@ form textarea::placeholder {
 .product-button {
   position: absolute;
   bottom: -47px;
+  left: 34px;
 
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -1373,6 +1374,7 @@ div.map {
 .contacts-card {
   position: absolute;
   top:63px;
+  right: 0;
   z-index: 2;
   width: 251px;
   padding-top: 28px;
@@ -1395,7 +1397,7 @@ div.map {
 }
 
 .contacts-card p:last-of-type {
-  margin-bottom: 38px;
+  margin-bottom: 27px;
 }
 
 .contacts-card .small {
@@ -1411,9 +1413,11 @@ div.map {
 }
 
 .feedback-open {
+  display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 29px;
+  padding-left: 24px;
+  padding-right: 20px;
 }
 
 .page-footer {
