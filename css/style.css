@@ -1592,6 +1592,7 @@ div.map {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 20;
 
   display: block;
   width: 476px;
@@ -2136,6 +2137,9 @@ fieldset.product-filter {
   vertical-align: top;
 }
 
+.product-filter input[type="checkbox"] {
+  width: 18px;
+}
 
 .product-filter input[type="radio"]:focus,
 .product-filter input[type="radio"]:checked:focus,
@@ -2220,7 +2224,7 @@ input[type="checkbox"]:checked + label::after {
   position: relative;
 
   margin-right: 8px;
-  padding-left: 7px;
+  padding-left: 12px;
 }
 
 .filter-filler input[type="checkbox"] {
@@ -2228,7 +2232,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .filter-filler:not(:last-of-type) {
-  margin-right: 18px;
+  margin-right: 16px;
 }
 
 .filter-filler::before {

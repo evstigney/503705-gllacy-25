@@ -47,10 +47,10 @@ var openModalFeedback = function () {
     if (top >= 50) {
       clearInterval(timer);
     } else {
-      top += 1;
+      top += 10;
       modalFeedback.style.top = top + '%';
     }
-  }, 0.5);
+  }, 10);
 };
 
 var closeModalFeedback = function () {
@@ -60,10 +60,10 @@ var closeModalFeedback = function () {
       modalFeedback.style.display = 'none';
       clearInterval(timer);
     } else {
-      top -= 1;
+      top -= 10;
       modalFeedback.style.top = top + '%';
     }
-  }, 0.1);
+  }, 10);
 };
 
 buttonFeedback.addEventListener('click', function (evt) {
