@@ -1010,7 +1010,9 @@ form textarea::placeholder {
   content: "";
 }
 
-.product-item:hover::after {
+.product-item:hover::after,
+.product-item:focus::after,
+.product-item:focus-within::after {
   z-index: 2;
 
   display: block;
@@ -1094,21 +1096,29 @@ form textarea::placeholder {
   padding-right: 16px;
 }
 
-.product-item:hover .product-button {
+.product-item:hover .product-button,
+.product-item:focus .product-button,
+.product-item:focus-within .product-button {
   z-index: 3;
 
   display: block;
 }
 
-.product-item:hover .product-item-picture {
+.product-item:hover .product-item-picture,
+.product-item:focus .product-item-picture,
+.product-item:focus-within .product-item-picture {
   z-index: 3;
 }
 
-.product-item:hover .product-item-price {
+.product-item:hover .product-item-price,
+.product-item:focus .product-item-price,
+.product-item:focus-within .product-item-price {
   z-index: 3;
 }
 
-.product-item-hit:hover::before {
+.product-item-hit:hover::before,
+.product-item-hit:focus::before,
+.product-item-hit:focus-within::before {
   z-index: 4;
 }
 
@@ -2139,6 +2149,7 @@ fieldset.product-filter {
 
 .product-filter input[type="checkbox"] {
   width: 18px;
+  height: 21px;
 }
 
 .product-filter input[type="radio"]:focus,
